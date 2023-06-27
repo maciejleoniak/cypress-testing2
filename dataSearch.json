@@ -1,4 +1,5 @@
 {
-    "searchQuery": "toys"
+    "searchQuery": "toys",
+    "invalidQuery": "Invalid query"
 }
 
