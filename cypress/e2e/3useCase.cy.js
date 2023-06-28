@@ -26,7 +26,6 @@ describe('User should be able to filter search results: price, shop location, co
         // search btn 
         cy.get('button.wt-btn--primary:nth-child(3)').click();
         
-
-    })
+    });
 });
 

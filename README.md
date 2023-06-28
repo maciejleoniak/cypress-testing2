@@ -4,3 +4,14 @@
 3. User should be able to filter search results: price, shop location, color
 4. User should be able to sort a search results: lowest and highest price
 5. User should be able to browse item details: verify price, picture, description, reviews
+
+
+<!-- Quiestion:
+1. How to pass test if useCase is constructed 'be able'? If user can search by clicking on btn then it is confirmed? Or I should make somthing to confirm searching at all.
+
+
+
+
+
+ -->
+

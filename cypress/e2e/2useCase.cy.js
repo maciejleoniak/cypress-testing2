@@ -17,5 +17,5 @@ describe('User should go to invalid search page in case of invalid query', () =>
 
         cy.get('#no-results-background-Defs1002').should('exist');
 
-    })
-})
+    });
+});
