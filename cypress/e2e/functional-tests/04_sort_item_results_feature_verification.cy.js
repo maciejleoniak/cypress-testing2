@@ -22,4 +22,3 @@ describe('User should be able to sort a search results: lowest and highest price
     });
 });
 
-\]
