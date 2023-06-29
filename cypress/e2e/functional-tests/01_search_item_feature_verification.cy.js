@@ -11,11 +11,9 @@ describe('User should search for an item and get appropriate results: items in r
 
     MainPage.clickOnCookieBtn();
 
-    cy.get('#global-enhancements-search-query').type(searchQuery).type('{enter}');
+    MainPage.fillSearchBar(searchQuery);
 
-    cy.get('ol.wt-grid').each((result) => {
-
-      cy.wrap(result).should('contain', searchQuery);
-    });
+    MainPage.searchResultsContainQuery(searchQuery);
+    
   });
 });
