@@ -1,5 +1,5 @@
-import dataSearch from '../../dataSearch.json';
-
+import dataSearch from '../../fixtures/dataSearch.json';
+import MainPage from '../../pages/mainPage';
 
 describe('User should search for an item and get appropriate results: items in result list should have query in the titles', () => {
   
@@ -9,9 +9,7 @@ describe('User should search for an item and get appropriate results: items in r
 
     cy.visit('https://www.etsy.com')
 
-    cy.wait(3000);
-
-    cy.get('div.wt-overlay__footer:nth-child(2) > div:nth-child(2) > button:nth-child(1)').click();
+    MainPage.clickOnCookieBtn();
 
     cy.get('#global-enhancements-search-query').type(searchQuery).type('{enter}');
 
