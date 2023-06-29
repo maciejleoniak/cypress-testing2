@@ -3,7 +3,9 @@ class mainPage {
     elements = {
 
         acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
-        searchBar: () => cy.get('#global-enhancements-search-query')
+        searchBar: () => cy.get('#global-enhancements-search-query'),
+        searchResults: () => cy.get('ol.wt-grid')
+
     };
 
     clickOnCookieBtn() {
@@ -15,23 +17,25 @@ class mainPage {
     };
 
     searchResultsContainQuery(searchQuery) {
-        cy.get('ol.wt-grid').each((result) => {
-            cy.wrap(result).should('contain', searchQuery);
-        });
+        this.elements.searchResults()
+            .each((result) => {
+                cy.wrap(result)
+                    .should('contain', searchQuery);
+            });
     };
 
 
-searchItem = {
+    searchItem = {
 
-};
+    };
 
-filterItem = {
+    filterItem = {
 
-};
+    };
 
-browseItem = {
+    browseItem = {
 
-};    
+    };
 }
 
 module.exports = new mainPage();
