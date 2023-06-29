@@ -4,7 +4,8 @@ class mainPage {
 
         acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
         searchBar: () => cy.get('#global-enhancements-search-query'),
-        searchResults: () => cy.get('ol.wt-grid')
+        searchResults: () => cy.get('ol.wt-grid'),
+        noResultsBackground: () => cy.get('#no-results-background-Defs1002')
 
     };
 
@@ -23,6 +24,14 @@ class mainPage {
                     .should('contain', searchQuery);
             });
     };
+
+
+    checkNoResultsBackground() {
+        this.elements.noResultsBackground().should('exist');
+    };
+
+
+
 
 
     searchItem = {
