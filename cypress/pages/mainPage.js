@@ -11,7 +11,10 @@ class mainPage {
         colorFilter: () => cy.get('label[for="attr_1-1"]'),
         acceptFiltersBtn: () => cy.get('button.wt-btn.wt-btn--primary.wt-width-full.wt-mt-xs-3.wt-mb-xs-3.wt-mr-xs-3'),
         activeFilters: () => cy.get('div[data-active-filters]'),
-        noResultsBackground: () => cy.get('#no-results-background-Defs1002')
+        noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
+        sortBtn: () => cy.get('div#sortby button.wt-menu__trigger'),
+        lowestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_asc"]'),
+        higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
 
 
     };
@@ -59,7 +62,14 @@ class mainPage {
         this.elements.activeFilters().should('be.visible');
     };
 
+    //sorting
+    clickOnSortBtn() {
+        this.elements.sortBtn().click();
+    };
 
+    chooseFilterPriceLowest() {
+        this.elements.lowestPriceSort().click();
+    };
 
 
     searchItem = {

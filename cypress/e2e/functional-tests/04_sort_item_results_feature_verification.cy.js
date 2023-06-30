@@ -1,5 +1,5 @@
-import dataSearch from '../../dataSearch.json';
-
+import dataSearch from '../../fixtures/dataSearch.json';
+import MainPage from '../../pages/mainPage';
 
 describe('User should be able to sort a search results: lowest and highest price', () => {
 
@@ -9,16 +9,17 @@ describe('User should be able to sort a search results: lowest and highest price
 
         cy.visit('https://www.etsy.com')
 
-        cy.wait(1000);
+        MainPage.clickOnCookieBtn();
 
-        cy.get('div.wt-overlay__footer:nth-child(2) > div:nth-child(2) > button:nth-child(1)').click();
+        MainPage.fillSearchBar(searchQuery);
 
-        cy.get('#global-enhancements-search-query').type(searchQuery).type('{enter}');
+        MainPage.clickOnSortBtn();
+    
+        MainPage.chooseFilterPriceLowest();
 
-        cy.get('.wt-menu__trigger__label > span:nth-child(1)').click();
-
-        cy.get('a.wt-menu__item:nth-child(3)').click();
-        
     });
 });
+
+
+
 
