@@ -6,10 +6,11 @@ class mainPage {
         searchBar: () => cy.get('#global-enhancements-search-query'),
         searchResults: () => cy.get('ol.wt-grid'),
         searchFilter: () => cy.get('#search-filter-button'),
-        shopLocationFilter: () => cy.get(''),
-        priceFilter: () => cy.get(''),
-        colorFilter: () => cy.get(''),
-        acceptFilters: () => cy.get(''),
+        shopLocationFilter: () => cy.get('label[for="shop-location-input-1"]'),
+        priceFilter: () => cy.get('#price-input-1'),
+        colorFilter: () => cy.get('label[for="attr_1-1"]'),
+        acceptFilters: () => cy.get('button.wt-btn.wt-btn--primary.wt-width-full.wt-mt-xs-3.wt-mb-xs-3.wt-mr-xs-3'),
+        activeFilters: () => cy.get('div[data-active-filters]'),
         noResultsBackground: () => cy.get('#no-results-background-Defs1002')
 
 
@@ -43,13 +44,16 @@ class mainPage {
     clickOnSearchFilterBtn() {
         this.elements.searchFilter().click();
     };
-    clickAcceptChossenFiltersBtn(searchLocation, searchPrice, searchColor) {
-        this.elements.shopLocationFilter(searchLocation).click();
-        this.elements.priceFilter(searchPrice).click();
-        this.elements.colorFilter(searchColor).click();
+    clickAcceptChossenFiltersBtn() {
+        this.elements.shopLocationFilter().click();
+        this.elements.priceFilter().click({ force: true });
+        this.elements.colorFilter().click();
         this.elements.acceptFilters().click();
     };
-
+    
+    verifiactionActiveFilters() {
+        this.elements.activeFilters().should('be.visible');
+    };
 
 
 
