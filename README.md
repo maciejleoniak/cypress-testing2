@@ -6,12 +6,4 @@
 5. User should be able to browse item details: verify price, picture, description, reviews
 
 
-<!-- Quiestion:
-1. How to pass test if useCase is constructed 'be able'? If user can search by clicking on btn then it is confirmed? Or I should make somthing to confirm searching at all.
-
-
-
-
-
- -->
 

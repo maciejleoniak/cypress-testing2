@@ -2,16 +2,20 @@ class mainPage {
 
     elements = {
 
+        //cookies acceptance
         acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
+        //search query
         searchBar: () => cy.get('#global-enhancements-search-query'),
         searchResults: () => cy.get('ol.wt-grid'),
         searchFilter: () => cy.get('#search-filter-button'),
+        noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
+         //filter options
         shopLocationFilter: () => cy.get('label[for="shop-location-input-1"]'),
         priceFilter: () => cy.get('#price-input-1'),
         colorFilter: () => cy.get('label[for="attr_1-1"]'),
         acceptFiltersBtn: () => cy.get('button.wt-btn.wt-btn--primary.wt-width-full.wt-mt-xs-3.wt-mb-xs-3.wt-mr-xs-3'),
         activeFilters: () => cy.get('div[data-active-filters]'),
-        noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
+        //sort options
         sortBtn: () => cy.get('div#sortby button.wt-menu__trigger'),
         lowestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_asc"]'),
         higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
@@ -71,18 +75,6 @@ class mainPage {
         this.elements.lowestPriceSort().click();
     };
 
-
-    searchItem = {
-
-    };
-
-    filterItem = {
-
-    };
-
-    browseItem = {
-
-    };
 }
 
 module.exports = new mainPage();
