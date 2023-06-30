@@ -1,7 +1,4 @@
 {
     "searchQuery": "toys",
-    "invalidQuery": "Invalid query",
-    "searchLocation": "",
-    "searchPrice": "",
-    "searchColor": ""
+    "invalidQuery": "Invalid query"
 }
