@@ -6,10 +6,6 @@ describe('User should be able to filter search results: price, shop location, co
     it('should be able to filter search', () => {
 
         const searchQuery = dataSearch.searchQuery;
-        const searchLocation = dataSearch.searchLocation;
-        const searchPrice = dataSearch.searchPrice;
-        const searchColor = dataSearch.searchColor;
-    
 
         cy.visit('https://www.etsy.com')
 
@@ -19,8 +15,9 @@ describe('User should be able to filter search results: price, shop location, co
 
         MainPage.clickOnSearchFilterBtn();
 
-        MainPage.clickAcceptChossenFiltersBtn(searchLocation, searchPrice, searchColor);
-        
+        MainPage.clickAcceptChossenFiltersBtn();
+
+        MainPage.verifiactionActiveFilters();
     });
 });
 
