@@ -15,6 +15,8 @@ describe('User should be able to filter search results: price, shop location, co
 
         MainPage.clickOnSearchFilterBtn();
 
+        MainPage.chooseFilters();
+
         MainPage.clickAcceptChossenFiltersBtn();
 
         MainPage.verifiactionActiveFilters();

@@ -44,10 +44,14 @@ class mainPage {
     clickOnSearchFilterBtn() {
         this.elements.searchFilter().click();
     };
-    clickAcceptChossenFiltersBtn() {
+
+    chooseFilters(){
         this.elements.shopLocationFilter().click();
         this.elements.priceFilter().click({ force: true });
         this.elements.colorFilter().click();
+    };
+
+    clickAcceptChossenFiltersBtn() {
         this.elements.acceptFiltersBtn().click();
     };
 
