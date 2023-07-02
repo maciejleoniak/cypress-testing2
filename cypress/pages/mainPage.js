@@ -9,7 +9,7 @@ class mainPage {
         searchResults: () => cy.get('ol.wt-grid'),
         searchFilter: () => cy.get('#search-filter-button'),
         noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
-         //filter options
+        //filter options
         shopLocationFilter: () => cy.get('label[for="shop-location-input-1"]'),
         priceFilter: () => cy.get('#price-input-1'),
         colorFilter: () => cy.get('label[for="attr_1-1"]'),
@@ -19,6 +19,9 @@ class mainPage {
         sortBtn: () => cy.get('div#sortby button.wt-menu__trigger'),
         lowestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_asc"]'),
         higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
+        //browser options
+        findBrowserElement: () => cy.get('li.wt-order-xs-1:nth-child(5) h3').click()
+
 
 
     };
@@ -52,7 +55,7 @@ class mainPage {
         this.elements.searchFilter().click();
     };
 
-    chooseFilters(){
+    chooseFilters() {
         this.elements.shopLocationFilter().click();
         this.elements.priceFilter().click({ force: true });
         this.elements.colorFilter().click();
@@ -74,6 +77,12 @@ class mainPage {
     chooseFilterPriceLowest() {
         this.elements.lowestPriceSort().click();
     };
+
+    //browser elements
+    clickOnBrowserElement() {
+        this.elements.findBrowserElement().click();
+    };
+
 
 }
 
