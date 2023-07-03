@@ -20,7 +20,8 @@ class mainPage {
         lowestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_asc"]'),
         higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
         //browser options
-        findBrowserElement: () => cy.get('li.wt-order-xs-1:nth-child(5) h3').click()
+        findBrowserElement: () => cy.get('li.wt-order-xs-1:nth-child(5) h3').invoke('attr', 'target', '_self').click()
+
 
 
 
