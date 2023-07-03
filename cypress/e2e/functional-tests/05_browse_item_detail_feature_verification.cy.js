@@ -15,7 +15,14 @@ describe('User should search for an item and get appropriate results: items in r
 
     // MainPage.clickOnBrowserElement();
 
-    
+    cy.get('ol.wt-grid li:first-child a.listing-link')
+  .invoke('attr', 'href')
+  .then(href => {
+    cy.log(href);
+    cy.visit(href);
+  });
+
+  cy.get('.wt-arrow-link--back').click()
 
   });
 });
