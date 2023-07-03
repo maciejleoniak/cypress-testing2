@@ -1,3 +1,4 @@
+
 import dataSearch from '../../fixtures/dataSearch.json';
 import MainPage from '../../pages/mainPage';
 
@@ -17,3 +18,4 @@ describe('User should search for an item and get appropriate results: items in r
 
   });
 });
+
