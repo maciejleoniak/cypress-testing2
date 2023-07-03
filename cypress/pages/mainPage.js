@@ -21,9 +21,11 @@ class mainPage {
         higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
         //browser options
         findBrowserElement: () => cy.get('ol.wt-grid li:first-child a.listing-link'),
-        backToMainPage: () => cy.get('.wt-arrow-link--back')
-
-
+        backToMainPage: () => cy.get('.wt-arrow-link--back'),
+        priceDetail: () => cy.get('#listing-page-cart > div:nth-child(1)'),
+        pictureDetail: () => cy.get('.listing-page-image-carousel-component'),
+        descriptionDetail: () => cy.get('#review-preview-toggle-0'),
+        reviewsDetail: () => cy.get('.review-card'),
 
     };
 
@@ -82,15 +84,39 @@ class mainPage {
     //browser elements
     clickOnBrowserElement() {
         this.elements.findBrowserElement().invoke('attr', 'href')
-        .then(href => {
-          cy.log(href);
-          cy.visit(href);
-        });
+            .then(href => {
+                cy.log(href);
+                cy.visit(href);
+            });
     };
-    
+
     clickBackToMainPage() {
         this.elements.backToMainPage().click();
     };
+
+    priceDetailVisibility() {
+        this.elements.priceDetail().should('be.visible');
+    };
+
+    pictureDetailVisibilty() {
+        this.elements.pictureDetail().should('be.visible');
+    };
+
+    descriptionDetailVisibility() {
+        this.elements.descriptionDetail().should('be.visible');
+    };
+
+    reviewsDetailVisibility() {
+        this.elements.reviewsDetail().should('be.visible');
+    };
+    
+    detailVisibility () {
+        this.priceDetailVisibility();
+        this.pictureDetailVisibilty();
+        this.descriptionDetailVisibility();
+        this.reviewsDetailVisibility();
+    };
+
 
 
 }
