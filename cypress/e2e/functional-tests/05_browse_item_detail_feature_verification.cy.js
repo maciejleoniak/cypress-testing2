@@ -13,16 +13,13 @@ describe('User should search for an item and get appropriate results: items in r
 
     MainPage.fillSearchBar(searchQuery);
 
-    // MainPage.clickOnBrowserElement();
+    MainPage.clickOnBrowserElement();
 
-    cy.get('ol.wt-grid li:first-child a.listing-link')
-  .invoke('attr', 'href')
-  .then(href => {
-    cy.log(href);
-    cy.visit(href);
-  });
+    // add asseration here
 
-  cy.get('.wt-arrow-link--back').click()
+    MainPage.clickBackToMainPage();
+
+    
 
   });
 });
