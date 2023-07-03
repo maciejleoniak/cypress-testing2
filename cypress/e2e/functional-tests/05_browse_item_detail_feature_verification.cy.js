@@ -15,7 +15,7 @@ describe('User should search for an item and get appropriate results: items in r
 
     MainPage.clickOnBrowserElement();
 
-    // add asseration here
+    MainPage.detailVisibility();
 
     MainPage.clickBackToMainPage();
 
