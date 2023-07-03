@@ -20,8 +20,8 @@ class mainPage {
         lowestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_asc"]'),
         higestPriceSort: () => cy.get('div#sortby a.wt-menu__item[data-sort-by="price_desc"]'),
         //browser options
-        findBrowserElement: () => cy.get('li.wt-order-xs-1:nth-child(5) h3').invoke('attr', 'target', '_self').click()
-
+        findBrowserElement: () => cy.get('ol.wt-grid li:first-child a.listing-link'),
+        backToMainPage: () => cy.get('.wt-arrow-link--back')
 
 
 
@@ -81,7 +81,15 @@ class mainPage {
 
     //browser elements
     clickOnBrowserElement() {
-        this.elements.findBrowserElement().click();
+        this.elements.findBrowserElement().invoke('attr', 'href')
+        .then(href => {
+          cy.log(href);
+          cy.visit(href);
+        });
+    };
+    
+    clickBackToMainPage() {
+        this.elements.backToMainPage().click();
     };
 
 
