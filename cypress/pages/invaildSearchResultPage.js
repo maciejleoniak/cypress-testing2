@@ -1,6 +1,6 @@
-class itemDetailsPage {
+class searchReslutsPage{
 
-    itemDetailsPage(){
+    searchReslutsPage(){
 
         // my elemetns to be used
 
