@@ -21,6 +21,17 @@ class searchResultsPage {
       });
   };
 
+
+  filterPanel(filterQuery) {
+  };
+
+  sortingPanel(sortingQuery) {
+  };
+
+
+
+
+
 }
 
 
