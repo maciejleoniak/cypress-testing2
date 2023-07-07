@@ -4,9 +4,7 @@ class mainPage {
 
         //cookies acceptance
         acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
-        //search query
-       
-       
+
         searchFilter: () => cy.get('#search-filter-button'),
         noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
         //filter options
@@ -103,9 +101,6 @@ class mainPage {
         this.descriptionDetailVisibility();
         this.reviewsDetailVisibility();
     };
-
-
-
 }
 
 module.exports = new mainPage();

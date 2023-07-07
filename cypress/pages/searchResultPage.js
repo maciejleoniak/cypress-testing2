@@ -8,25 +8,18 @@ class searchResultsPage {
 
   searchBar(searchQuery) {
     this.fillSearchBar(searchQuery);
-    this.searchResultsContainQuery(searchQuery);
-
+    this.searchResultsVerification(searchQuery);
   };
-
   fillSearchBar(searchQuery) {
     this.elements.searchBar().type(searchQuery).type('{enter}');
-  }
-
-  searchResultsContainQuery(searchQuery) {
+  };
+  searchResultsVerification(searchQuery) {
     this.elements.searchResults()
       .each((result) => {
         cy.wrap(result)
           .should('contain', searchQuery);
       });
   };
-
-
-
-
 
 }
 
