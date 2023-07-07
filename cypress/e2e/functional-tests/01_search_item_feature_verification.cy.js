@@ -1,6 +1,7 @@
 
 import dataSearch from '../../fixtures/dataSearch.json';
 import MainPage from '../../pages/mainPage';
+import searchBar from '../../pages/searchResultPage';
 
 describe('User should search for an item and get appropriate results: items in result list should have query in the titles', () => {
 
@@ -12,10 +13,8 @@ describe('User should search for an item and get appropriate results: items in r
 
     MainPage.clickOnCookieBtn();
 
-    MainPage.fillSearchBar(searchQuery);
-
-    MainPage.searchResultsContainQuery(searchQuery);
-
+    searchBar.searchBar.type(searchQuery);
+    
   });
 });
 

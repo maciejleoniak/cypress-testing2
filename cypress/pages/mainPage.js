@@ -5,8 +5,8 @@ class mainPage {
         //cookies acceptance
         acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
         //search query
-        searchBar: () => cy.get('#global-enhancements-search-query'),
-        searchResults: () => cy.get('ol.wt-grid'),
+       
+       
         searchFilter: () => cy.get('#search-filter-button'),
         noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
         //filter options
@@ -34,19 +34,6 @@ class mainPage {
         this.elements.acceptCookieBtn().click();
     };
 
-    //search query
-    fillSearchBar(searchQuery) {
-        this.elements.searchBar().type(searchQuery).type('{enter}');
-    };
-
-    //search results verification
-    searchResultsContainQuery(searchQuery) {
-        this.elements.searchResults()
-            .each((result) => {
-                cy.wrap(result)
-                    .should('contain', searchQuery);
-            });
-    };
 
     //invalid search results verification
     checkNoResultsBackground() {

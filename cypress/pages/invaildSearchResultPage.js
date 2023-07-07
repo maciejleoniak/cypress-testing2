@@ -1,6 +1,6 @@
-class searchReslutsPage{
+class inavildSearchReslutsPage{
 
-    searchReslutsPage(){
+    inavildSearchReslutsPage(){
 
         // my elemetns to be used
 

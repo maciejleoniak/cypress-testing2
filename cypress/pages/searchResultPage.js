@@ -1,10 +1,35 @@
-class searchReslutsPage{
+class searchResultsPage {
 
-    searchReslutsPage(){
+  elements = {
+    searchBar: () => cy.get('#global-enhancements-search-query'),
+    searchResults: () => cy.get('ol.wt-grid'),
+  };
 
-        // my elemetns to be used
 
-    }
+  searchBar(searchQuery) {
+    this.fillSearchBar(searchQuery);
+    this.searchResultsContainQuery(searchQuery);
 
-        //my methods to be used
+  };
+
+  fillSearchBar(searchQuery) {
+    this.elements.searchBar().type(searchQuery).type('{enter}');
+  }
+
+  searchResultsContainQuery(searchQuery) {
+    this.elements.searchResults()
+      .each((result) => {
+        cy.wrap(result)
+          .should('contain', searchQuery);
+      });
+  };
+
+
+
+
+
 }
+
+
+
+module.exports = new searchResultsPage();
