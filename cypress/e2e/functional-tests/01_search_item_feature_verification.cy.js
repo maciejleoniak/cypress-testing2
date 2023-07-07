@@ -13,8 +13,8 @@ describe('User should search for an item and get appropriate results: items in r
 
     MainPage.clickOnCookieBtn();
 
-    searchBar.searchBar.type(searchQuery);
-    
+    searchBar.searchBar(searchQuery);
+
   });
 });
 
