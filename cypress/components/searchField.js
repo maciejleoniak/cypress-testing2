@@ -1,9 +1,11 @@
 export class SearchField {
 
-   searchFieldSelector = cy.get('#global-enhancements-search-query');
+visit = cy.visit('https://www.etsy.com')
+
+   searchFieldSelector = '#global-enhancements-search-query';
 
     constructor() {
-        this.searchField = this.searchFieldSelector;
+        this.searchField = cy.get(this.searchFieldSelector);
 
     }
     searchFor(searchQuery) {
