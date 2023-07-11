@@ -1,16 +1,13 @@
-export class SearchField {
-
-visit = cy.visit('https://www.etsy.com')
+class SearchField {
 
    searchFieldSelector = '#global-enhancements-search-query';
 
-    constructor() {
-        this.searchField = cy.get(this.searchFieldSelector);
-
-    }
     searchFor(searchQuery) {
-        this.searchField.clear();
-        this.searchField.type(searchQuery);
-        this.searchField.type('{enter}');
+        cy.get(this.searchFieldSelector)
+        .clear()
+        .type(searchQuery)
+        .type('{enter}');
     }
 }
+
+module.exports = new SearchField;
