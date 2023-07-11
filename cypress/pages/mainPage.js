@@ -18,8 +18,9 @@ class MainPage {
     SearchField.searchFor(searchQuery);
   }
 
+  SearchBarResultVerifi(searchQuery) {
+    SearchField.searchListResultsContainQuery(searchQuery);
+  }
 }
-
-
 
 module.exports = new MainPage();
