@@ -2,6 +2,7 @@ class SearchField {
 
    searchForFieldSelector = '#global-enhancements-search-query';
    searchListResultContainerQuerySelector = 'ol.wt-grid';
+   searchForInvalidQuerySelector = '#no-results-background-Defs1002';
 
     searchFor(searchQuery) {
         cy.get(this.searchForFieldSelector)
@@ -18,6 +19,10 @@ class SearchField {
             });
     };
 
+    searchForInvalidQuery() {
+        cy.get(this.searchForInvalidQuerySelector)
+        .should('exist');
+    }
 
 }
 

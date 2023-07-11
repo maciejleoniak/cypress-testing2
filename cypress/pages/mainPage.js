@@ -21,6 +21,10 @@ class MainPage {
   SearchBarResultVerifi(searchQuery) {
     SearchField.searchListResultsContainQuery(searchQuery);
   }
+
+  SearchBarInvalid(searchQuery) {
+    SearchField.searchForInvalidQuery(searchQuery);
+  }
 }
 
 module.exports = new MainPage();

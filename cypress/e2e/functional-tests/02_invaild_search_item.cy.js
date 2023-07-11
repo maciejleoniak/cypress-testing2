@@ -1,5 +1,5 @@
 import dataSearch from '../../fixtures/dataSearch.json';
-import MainPage from '../../pages/mainPage';
+import mainpage from '../../pages/MainPage';
 
 describe('User should go to invalid search page in case of invalid query', () => {
 
@@ -7,13 +7,13 @@ describe('User should go to invalid search page in case of invalid query', () =>
 
     const searchQuery = dataSearch.invalidQuery;
 
-    cy.visit('https://www.etsy.com');
+    mainpage.GoToWebsite();
 
-    MainPage.clickOnCookieBtn();
+    mainpage.PrivacyPolicySettingsAccept();
 
-    MainPage.fillSearchBar(searchQuery);
+    mainpage.SearchBar(searchQuery);
 
-    MainPage.checkNoResultsBackground(searchQuery);
+    mainpage.SearchBarInvalid(searchQuery);
 
   });
 });
