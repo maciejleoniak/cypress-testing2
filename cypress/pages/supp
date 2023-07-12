@@ -2,18 +2,18 @@ class mainPage {
 
     elements = {
 
-        //cookies acceptance
-        acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
-        //search query
-        searchBar: () => cy.get('#global-enhancements-search-query'),
-        searchResults: () => cy.get('ol.wt-grid'),
-        searchFilter: () => cy.get('#search-filter-button'),
-        noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
-        //filter options
-        shopLocationFilter: () => cy.get('label[for="shop-location-input-1"]'),
-        priceFilter: () => cy.get('#price-input-1'),
-        colorFilter: () => cy.get('label[for="attr_1-1"]'),
-        acceptFiltersBtn: () => cy.get('button.wt-btn.wt-btn--primary.wt-width-full.wt-mt-xs-3.wt-mb-xs-3.wt-mr-xs-3'),
+        // //cookies acceptance
+        // acceptCookieBtn: () => cy.get('[data-gdpr-single-choice-accept="true"]'),
+        // //search query
+        // searchBar: () => cy.get('#global-enhancements-search-query'),
+        // searchResults: () => cy.get('ol.wt-grid'),
+        // searchFilter: () => cy.get('#search-filter-button'),
+        // noResultsBackground: () => cy.get('#no-results-background-Defs1002'),
+        // //filter options
+        // shopLocationFilter: () => cy.get('label[for="shop-location-input-1"]'),
+        // priceFilter: () => cy.get('#price-input-1'),
+        // colorFilter: () => cy.get('label[for="attr_1-1"]'),
+        // acceptFiltersBtn: () => cy.get('button.wt-btn.wt-btn--primary.wt-width-full.wt-mt-xs-3.wt-mb-xs-3.wt-mr-xs-3'),
         activeFilters: () => cy.get('div[data-active-filters]'),
         //sort options
         sortBtn: () => cy.get('div#sortby button.wt-menu__trigger'),
@@ -29,29 +29,29 @@ class mainPage {
 
     };
 
-    //cookies acceptance
-    clickOnCookieBtn() {
-        this.elements.acceptCookieBtn().click();
-    };
+    // //cookies acceptance
+    // clickOnCookieBtn() {
+    //     this.elements.acceptCookieBtn().click();
+    // };
 
-    //search query
-    fillSearchBar(searchQuery) {
-        this.elements.searchBar().type(searchQuery).type('{enter}');
-    };
+    // //search query
+    // fillSearchBar(searchQuery) {
+    //     this.elements.searchBar().type(searchQuery).type('{enter}');
+    // };
 
-    //search results verification
-    searchResultsContainQuery(searchQuery) {
-        this.elements.searchResults()
-            .each((result) => {
-                cy.wrap(result)
-                    .should('contain', searchQuery);
-            });
-    };
+    // //search results verification
+    // searchResultsContainQuery(searchQuery) {
+    //     this.elements.searchResults()
+    //         .each((result) => {
+    //             cy.wrap(result)
+    //                 .should('contain', searchQuery);
+    //         });
+    // };
 
-    //invalid search results verification
-    checkNoResultsBackground() {
-        this.elements.noResultsBackground().should('exist');
-    };
+    // //invalid search results verification
+    // checkNoResultsBackground() {
+    //     this.elements.noResultsBackground().should('exist');
+    // };
 
     //search filter verification
     clickOnSearchFilterBtn() {
