@@ -18,7 +18,7 @@ class MainPage {
     SearchField.searchFor(searchQuery);
   }
 
-  SearchBarResultVerifi(searchQuery) {
+  SearchBarResultCheck(searchQuery) {
     SearchField.searchListResultsContainQuery(searchQuery);
   }
 

@@ -1,17 +1,23 @@
+import  SearchResultFilter from "../components/searchResultFilterPanel";
+
+
 class SearchResultsPage {
 
-
-  filterPanel(filterQuery) {
-  };
-
-  sortingPanel(sortingQuery) {
-  };
+FilterPanelSelector = '#search-filter-button'
 
 
 
 
-
+filterPanel() {
+  cy.get(this.FilterPanelSelector).click();
+   SearchResultFilter.FilterPanel();
 }
+
+  
+
+//   sortingPanel(sortingQuery) {
+//   };
+ }
 
 
 module.exports = new SearchResultsPage();

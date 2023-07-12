@@ -1,5 +1,5 @@
 import dataSearch from '../../fixtures/dataSearch.json';
-import mainpage from '../../pages/MainPage';
+import mainpage from '../../pages/mainPage';
 
 describe('User should go to invalid search page in case of invalid query', () => {
 

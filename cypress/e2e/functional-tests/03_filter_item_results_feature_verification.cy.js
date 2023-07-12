@@ -1,5 +1,6 @@
 import dataSearch from '../../fixtures/dataSearch.json';
-import MainPage from '../../pages/mainPage';
+import mainpage from '../../pages/mainPage';
+import searchResult from '../../pages/searchResultPage';
 
 describe('User should be able to filter search results: price, shop location, color', () => {
 
@@ -7,19 +8,14 @@ describe('User should be able to filter search results: price, shop location, co
 
         const searchQuery = dataSearch.searchQuery;
 
-        cy.visit('https://www.etsy.com')
+    mainpage.GoToWebsite();
 
-        MainPage.clickOnCookieBtn();
+    mainpage.PrivacyPolicySettingsAccept();
 
-        MainPage.fillSearchBar(searchQuery);
+    mainpage.SearchBar(searchQuery);
 
-        MainPage.clickOnSearchFilterBtn();
+        searchResult.filterPanel();
 
-        MainPage.chooseFilters();
-
-        MainPage.clickAcceptChossenFiltersBtn();
-
-        MainPage.verifiactionActiveFilters();
     });
 });
 
