@@ -1,5 +1,6 @@
 import dataSearch from '../../fixtures/dataSearch.json';
-import MainPage from '../../pages/mainPage';
+import mainpage from '../../pages/mainPage';
+import searchResult from '../../pages/searchResultPage';
 
 describe('User should be able to sort a search results: lowest and highest price', () => {
 
@@ -7,15 +8,13 @@ describe('User should be able to sort a search results: lowest and highest price
 
         const searchQuery = dataSearch.searchQuery;
 
-        cy.visit('https://www.etsy.com')
+        mainpage.GoToWebsite();
 
-        MainPage.clickOnCookieBtn();
+        mainpage.PrivacyPolicySettingsAccept();
 
-        MainPage.fillSearchBar(searchQuery);
+        mainpage.SearchBar(searchQuery);
 
-        MainPage.clickOnSortBtn();
-    
-        MainPage.chooseFilterPriceLowest();
+        searchResult.SortResults();
 
     });
 });
