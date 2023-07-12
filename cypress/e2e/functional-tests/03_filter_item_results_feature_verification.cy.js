@@ -8,13 +8,15 @@ describe('User should be able to filter search results: price, shop location, co
 
         const searchQuery = dataSearch.searchQuery;
 
-    mainpage.GoToWebsite();
+        mainpage.GoToWebsite();
 
-    mainpage.PrivacyPolicySettingsAccept();
+        mainpage.PrivacyPolicySettingsAccept();
 
-    mainpage.SearchBar(searchQuery);
+        mainpage.SearchBar(searchQuery);
 
-        searchResult.filterPanel();
+        searchResult.ResultsFilter();
+
+        searchResult.ResultsFilterVerifi();
 
     });
 });
