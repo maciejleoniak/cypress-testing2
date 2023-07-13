@@ -24,7 +24,19 @@ class SearchResultsPage {
   SortResults () {
     SearchResultsSort.sortPanel();
     cy.get(this.SortOptionLowestPriceSelector).click();
+    cy.contains('order').should('be.visible');
   }
+  SortResults() {
+    SearchResultsSort.sortPanel();
+    cy.get(this.SortOptionLowestPriceSelector)
+    .click()
+      .invoke('attr', 'href')
+      .then(href => {
+        expect(href).to.include('order');
+      })
+      
+  }
+  
 
 }
 

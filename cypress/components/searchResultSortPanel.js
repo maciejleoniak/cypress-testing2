@@ -4,6 +4,7 @@ class  SearchResultsSortPanel {
   
     sortPanel() {
       cy.get(this.sortPanelButtonSelector).click();
+    
     }
   
   }
