@@ -1,10 +1,26 @@
+import itemBrowse from '../components/itemBrowse';
+
 class itemDetailsPage {
 
-    itemDetailsPage(){
+    browseItemSelector = 'ol.wt-grid li:first-child a.listing-link';
+    backToMainPage = '.wt-arrow-link--back';
 
-        // my elemetns to be used
+    itemDetailsPage() {
 
-    }
+        cy.get(this.browseItemSelector)
+            .invoke('attr', 'href')
+            .then(href => {
+                cy.log(href);
+                cy.visit(href);
+            })
 
-        //my methods to be used
+        itemBrowse.itemBrowserVisbility();
+
+
+        cy.get(this.backToMainPage).click();
+    };
+
 }
+
+
+module.exports = new itemDetailsPage();

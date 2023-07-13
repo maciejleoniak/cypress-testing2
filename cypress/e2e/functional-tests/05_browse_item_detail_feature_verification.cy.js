@@ -1,5 +1,6 @@
 import dataSearch from '../../fixtures/dataSearch.json';
-import MainPage from '../../pages/mainPage';
+import mainpage from '../../pages/mainPage';
+import itemdeatil from '../../pages/ItemDetailsPage';
 
 describe('User should search for an item and get appropriate results: items in result list should have query in the titles', () => {
 
@@ -7,19 +8,14 @@ describe('User should search for an item and get appropriate results: items in r
 
     const searchQuery = dataSearch.searchQuery;
 
-    cy.visit('https://www.etsy.com');
+    mainpage.GoToWebsite();
 
-    MainPage.clickOnCookieBtn();
+    mainpage.PrivacyPolicySettingsAccept();
 
-    MainPage.fillSearchBar(searchQuery);
+    mainpage.SearchBar(searchQuery);
 
-    MainPage.clickOnBrowserElement();
+    itemdeatil.itemDetailsPage();
 
-    MainPage.detailVisibility();
-
-    MainPage.clickBackToMainPage();
-
-    
 
   });
 });

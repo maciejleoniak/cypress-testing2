@@ -22,6 +22,8 @@ class mainPage {
         //browser options
         findBrowserElement: () => cy.get('ol.wt-grid li:first-child a.listing-link'),
         backToMainPage: () => cy.get('.wt-arrow-link--back'),
+
+
         priceDetail: () => cy.get('#listing-page-cart > div:nth-child(1)'),
         pictureDetail: () => cy.get('.listing-page-image-carousel-component'),
         descriptionDetail: () => cy.get('#review-preview-toggle-0'),
@@ -54,32 +56,32 @@ class mainPage {
     // };
 
     //search filter verification
-    clickOnSearchFilterBtn() {
-        this.elements.searchFilter().click();
+    // clickOnSearchFilterBtn() {
+    //     this.elements.searchFilter().click();
+    // };
+
+    // chooseFilters() {
+    //     this.elements.shopLocationFilter().click();
+    //     this.elements.priceFilter().click({ force: true });
+    // //     this.elements.colorFilter().click();
+    // };
+
+    // clickAcceptChossenFiltersBtn() {
+    //     this.elements.acceptFiltersBtn().click();
+    // };
+
+    // verifiactionActiveFilters() {
+    //     this.elements.activeFilters().should('be.visible');
     };
 
-    chooseFilters() {
-        this.elements.shopLocationFilter().click();
-        this.elements.priceFilter().click({ force: true });
-        this.elements.colorFilter().click();
-    };
+    // //sorting
+    // clickOnSortBtn() {
+    //     this.elements.sortBtn().click();
+    // };
 
-    clickAcceptChossenFiltersBtn() {
-        this.elements.acceptFiltersBtn().click();
-    };
-
-    verifiactionActiveFilters() {
-        this.elements.activeFilters().should('be.visible');
-    };
-
-    //sorting
-    clickOnSortBtn() {
-        this.elements.sortBtn().click();
-    };
-
-    chooseFilterPriceLowest() {
-        this.elements.lowestPriceSort().click();
-    };
+    // chooseFilterPriceLowest() {
+    // //     this.elements.lowestPriceSort().click();
+    // };
 
     //browser elements
     clickOnBrowserElement() {
