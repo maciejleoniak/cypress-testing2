@@ -5,11 +5,11 @@ class itemBrowse {
     descriptionDetail = '#review-preview-toggle-0';
     reviewsDetail = '.review-card';
 
-    itemBrowserVisbility() {
-        cy.get(this.priceDetail);
-        cy.get(this.pictureDetail);
-        cy.get(this.descriptionDetail);
-        cy.get(this.reviewsDetail);
+    itemBrowseVisbility() {
+        cy.get(this.priceDetail).should('be.visible');
+        cy.get(this.pictureDetail).should('be.visible')
+        cy.get(this.descriptionDetail).should('be.visible')
+        cy.get(this.reviewsDetail).should('be.visible')
     }
 
 

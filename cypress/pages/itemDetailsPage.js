@@ -1,4 +1,4 @@
-import itemBrowse from '../components/itemBrowse';
+import itemBrowse from '../components/itemBrowse'
 
 class itemDetailsPage {
 
@@ -14,7 +14,9 @@ class itemDetailsPage {
                 cy.visit(href);
             })
 
-        itemBrowse.itemBrowserVisbility();
+            // cy.get('#listing-page-cart > div:nth-child(1)').should('be.visible')
+
+        itemBrowse.itemBrowseVisbility()
 
 
         cy.get(this.backToMainPage).click();
