@@ -10,8 +10,7 @@ class  SearchResultsFilterPanel {
     cy.get(this.priceSelector).click({force: true});
     cy.get(this.shopLocationSelector).click();
     // cy.get(this.colorSelector).click();
-  }
-
-}
+  };
+};
 
 module.exports = new SearchResultsFilterPanel(); 

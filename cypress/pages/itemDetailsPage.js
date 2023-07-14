@@ -12,17 +12,11 @@ class itemDetailsPage {
             .then(href => {
                 cy.log(href);
                 cy.visit(href);
-            })
+            });
 
-            // cy.get('#listing-page-cart > div:nth-child(1)').should('be.visible')
-
-        itemBrowse.itemBrowseVisbility()
-
-
+        itemBrowse.itemBrowseVisbility();
         cy.get(this.backToMainPage).click();
     };
-
-}
-
+};
 
 module.exports = new itemDetailsPage();

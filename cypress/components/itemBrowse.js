@@ -10,10 +10,7 @@ class itemBrowse {
         cy.get(this.pictureDetail).should('be.visible')
         cy.get(this.descriptionDetail).should('be.visible')
         cy.get(this.reviewsDetail).should('be.visible')
-    }
-
-
-
-}
+    };
+};
 
 module.exports = new itemBrowse();

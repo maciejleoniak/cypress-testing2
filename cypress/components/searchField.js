@@ -9,7 +9,7 @@ class SearchField {
         .clear()
         .type(searchQuery)
         .type('{enter}');
-    }
+    };
 
     searchListResultsContainQuery(searchQuery) {
         cy.get(this.searchListResultContainerQuerySelector)
@@ -22,8 +22,7 @@ class SearchField {
     searchForInvalidQuery() {
         cy.get(this.searchForInvalidQuerySelector)
         .should('exist');
-    }
-
-}
+    };
+};
 
 module.exports = new SearchField();

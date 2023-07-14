@@ -5,8 +5,7 @@ class  SearchResultsSortPanel {
     sortPanel() {
       cy.get(this.sortPanelButtonSelector).click();
     
-    }
-  
-  }
+    };
+  };
   
   module.exports = new SearchResultsSortPanel(); 
