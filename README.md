@@ -1,4 +1,6 @@
-#### Goals:
+#### Goals
+Main goal of this repo is improve my skills in automation testing field. To do this I choose Cypress tool. 
+I conducted functional test at Etsy website (www.etsy.com).   
 
 #### Target User Scenario: 
 1. User should search for an item and get appropriate results: items in result list should have query in the titles
