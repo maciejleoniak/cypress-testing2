@@ -29,7 +29,7 @@ npm install
 ```sh
 npx cypress open 
 ```
-7. Run the tests by button in Cypress client:  
+7. Run the tests one-by-one in Cypress client or use command to run&record:  
  ```sh
-"Run all specs"
+npx cypress run --record --key ce049ab5-b10b-4803-a9b1-31a86fff21e8
 ```
